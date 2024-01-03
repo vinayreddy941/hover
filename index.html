@@ -5,55 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Transformation Demo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden; /* To prevent scrolling */
-        }
 
-        .transform-box {
-            position: relative;
-            height: 200px;
-            margin-right: 20px; /* Adjust the margin value as needed for the desired gap */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.1s ease;
-            will-change: transform;
-            transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
-        }
-        
-
-        .img {
-            width: 400px;
-            height: 200px;
-        }
-
-        .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(10%, -50%); /* Centering trick */
-            color: white; /* Text color */
-            font-size: 24px; /* Adjust font size as needed */
-        }
-
-        .tet {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(65%, -50%); /* Centering trick */
-            background-color: blue;
-            color: white; /* Text color */
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,30 +20,11 @@
        
     </div>
 
-    <script>
-        const boxes = document.querySelectorAll('.transform-box');
+ <script href = "script.js">
 
-        boxes.forEach(box => {
-            box.addEventListener('mousemove', function (e) {
-                const boxRect = box.getBoundingClientRect();
-                const centerX = boxRect.left + boxRect.width / 2;
-                const centerY = boxRect.top + boxRect.height / 2;
-
-                const deltaX = e.clientX - centerX;
-                const deltaY = e.clientY - centerY;
-
-                const rotateX = deltaY / 10; // Adjust the division value for sensitivity
-                const rotateY = -deltaX / 10; // Adjust the division value for sensitivity
-
-                box.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-            });
-
-            box.addEventListener('mouseleave', function () {
-                box.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
-            });
-        });
-    </script>
+ </script>
 
 </body>
 
 </html>
+
