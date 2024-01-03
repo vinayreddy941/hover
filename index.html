@@ -60,50 +60,52 @@
         <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
     </div>
 
-<script>
-    const boxes = document.querySelectorAll('.transform-box');
-
-    boxes.forEach(box => {
-        let isDragging = false;
-        let previousX, previousY;
-
-        const handleDragStart = (e) => {
-            isDragging = true;
-            const touch = e.touches ? e.touches[0] : e;
-            previousX = touch.clientX;
-            previousY = touch.clientY;
-        };
-
-        const handleDragMove = (e) => {
-            if (isDragging) {
+    <script>
+        const boxes = document.querySelectorAll('.transform-box');
+    
+        boxes.forEach(box => {
+            let isDragging = false;
+            let previousX, previousY;
+    
+            const handleDragStart = (e) => {
+                isDragging = true;
                 const touch = e.touches ? e.touches[0] : e;
-                const deltaX = touch.clientX - previousX;
-                const deltaY = touch.clientY - previousY;
-
-                const rotateX = deltaY / 30;
-                const rotateY = -deltaX / 30;
-
-                box.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-
                 previousX = touch.clientX;
                 previousY = touch.clientY;
-            }
-        };
-
-        const handleDragEnd = () => {
-            isDragging = false;
-            box.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
-        };
-
-        box.addEventListener('mousedown', handleDragStart);
-        box.addEventListener('mousemove', handleDragMove);
-        box.addEventListener('mouseup', handleDragEnd);
-
-        box.addEventListener('touchstart', handleDragStart);
-        box.addEventListener('touchmove', handleDragMove);
-        box.addEventListener('touchend', handleDragEnd);
-    });
-</script>
+            };
+    
+            const handleDragMove = (e) => {
+                if (isDragging) {
+                    const touch = e.touches ? e.touches[0] : e;
+                    const deltaX = touch.clientX - previousX;
+                    const deltaY = touch.clientY - previousY;
+    
+                    // Increased sensitivity by multiplying the rotation factors
+                    const rotateX = deltaY / 5;
+                    const rotateY = -deltaX / 5;
+    
+                    box.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+    
+                    previousX = touch.clientX;
+                    previousY = touch.clientY;
+                }
+            };
+    
+            const handleDragEnd = () => {
+                isDragging = false;
+                box.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
+            };
+    
+            box.addEventListener('mousedown', handleDragStart);
+            box.addEventListener('mousemove', handleDragMove);
+            box.addEventListener('mouseup', handleDragEnd);
+    
+            box.addEventListener('touchstart', handleDragStart);
+            box.addEventListener('touchmove', handleDragMove);
+            box.addEventListener('touchend', handleDragEnd);
+        });
+    </script>
+    
 
 </body>
 </html>
