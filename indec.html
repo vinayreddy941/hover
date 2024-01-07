@@ -1,109 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D Transformation Demo</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: black;
-        overflow: hidden; /* To prevent scrolling */
-    }
-
-    .transform-box {
-        margin-right: 20px; /* Add margin between the images */
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform 0.1s ease; /* Reduced transition time */
-        will-change: transform;
-        transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
-    }
-
-    .img {
-        width: 400px;
-        height: 200px;
-    }
-
-    .text {
-        top: 50%;
-        left: 50%;
-        transform: translate(10%, -50%); /* Centering trick */
-        color: white; /* Text color */
-        font-size: 24px; /* Adjust font size as needed */
-    }
-
-    .tet {
-        top: 50%;
-        left: 50%;
-        transform: translate(65%, -50%); /* Centering trick */
-        background-color: blue;
-        color: white; /* Text color */
-        width: 100%;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <!-- Add onclick attribute to the h1 element -->
+    <button onclick="myfunction1()">drfgh</button>
+    <h2 id="demo"></h2>
 
-    <div class="transform-box" id="box1">
-        <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
-    </div>
+    <script>
+        let p1 = 22;
+        let p2 = 11;
+        let isVisible = true;
 
-    <div class="transform-box" id="box2">
-        <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
-    </div>
+        // Add event listener to the document for the click event
+       
+        
+        function myfunction1() {
 
-<script>
-    const boxes = document.querySelectorAll('.transform-box');
-
-    boxes.forEach(box => {
-        let isDragging = false;
-        let previousX, previousY;
-
-        const handleDragStart = (e) => {
-            isDragging = true;
-            const touch = e.touches ? e.touches[0] : e;
-            previousX = touch.clientX;
-            previousY = touch.clientY;
-        };
-
-        const handleDragMove = (e) => {
-            if (isDragging) {
-                const touch = e.touches ? e.touches[0] : e;
-                const deltaX = touch.clientX - previousX;
-                const deltaY = touch.clientY - previousY;
-
-                const rotateX = deltaY / 10;
-                const rotateY = -deltaX / 10;
-
-                box.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-
-                previousX = touch.clientX;
-                previousY = touch.clientY;
+            if (isVisible) {
+                document.getElementById("demo").innerHTML = p1 * p2;
+                isVisible = false;
+            }else{
+                document.getElementById("demo").innerHTML = "";
+                isVisible = true;
             }
-        };
+            
+            // Set the innerHTML of the element with id "demo" to the product of p1 and p2
 
-        const handleDragEnd = () => {
-            isDragging = false;
-            box.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
-        };
-
-        box.addEventListener('mousedown', handleDragStart);
-        box.addEventListener('mousemove', handleDragMove);
-        box.addEventListener('mouseup', handleDragEnd);
-
-        box.addEventListener('touchstart', handleDragStart);
-        box.addEventListener('touchmove', handleDragMove);
-        box.addEventListener('touchend', handleDragEnd);
-    });
-</script>
-
+            
+        }
+    </script>
 </body>
 </html>
