@@ -42,8 +42,82 @@
             <tr><td>blur</td><td>An element loses focus</td><td>FocusEvent</td></tr>
             <tr><td>canplay</td><td>The browser can start playing a media</td><td>Event</td></tr>
             <tr><td>canplaythrough</td><td>The browser can play through a media without stopping for buffering</td><td>Event</td></tr>
-            <!-- ... Continue this pattern for each event ... -->
-            <!-- ... Due to space constraints, I'm not listing all events here ... -->
+            <tr><td>change</td><td>The content of a form element has changed</td><td>Event</td></tr>
+            <tr><td>click</td><td>An element is clicked on</td><td>MouseEvent</td></tr>
+            <tr><td>contextmenu</td><td>An element is right-clicked to open a context menu</td><td>MouseEvent</td></tr>
+            <tr><td>copy</td><td>The content of an element is copied</td><td>ClipboardEvent</td></tr>
+            <tr><td>cut</td><td>The content of an element is cut</td><td>ClipboardEvent</td></tr>
+            <tr><td>dblclick</td><td>An element is double-clicked</td><td>MouseEvent</td></tr>
+            <tr><td>drag</td><td>An element is being dragged</td><td>DragEvent</td></tr>
+            <tr><td>dragend</td><td>Dragging of an element has ended</td><td>DragEvent</td></tr>
+            <tr><td>dragenter</td><td>A dragged element enters the drop target</td><td>DragEvent</td></tr>
+            <tr><td>dragleave</td><td>A dragged element leaves the drop target</td><td>DragEvent</td></tr>
+            <tr><td>dragover</td><td>A dragged element is over the drop target</td><td>DragEvent</td></tr>
+            <tr><td>dragstart</td><td>Dragging of an element has started</td><td>DragEvent</td></tr>
+            <tr><td>drop</td><td>A dragged element is dropped on the target</td><td>DragEvent</td></tr>
+            <tr><td>durationchange</td><td>The duration of a media is changed</td><td>Event</td></tr>
+            <tr><td>ended</td><td>A media has reached the end</td><td>Event</td></tr>
+            <tr><td>error</td><td>An error has occurred while loading a resource</td><td>ProgressEvent, UiEvent, Event</td></tr>
+            <tr><td>focus</td><td>An element gets focus</td><td>FocusEvent</td></tr>
+            <tr><td>focusin</td><td>An element is about to get focus</td><td>FocusEvent</td></tr>
+            <tr><td>focusout</td><td>An element is about to lose focus</td><td>FocusEvent</td></tr>
+            <tr><td>fullscreenchange</td><td>An element enters or exits fullscreen mode</td><td>Event</td></tr>
+            <tr><td>fullscreenerror</td><td>An element can't be displayed in fullscreen mode</td><td>Event</td></tr>
+            <tr><td>hashchange</td><td>Changes to the anchor part of a URL</td><td>HashChangeEvent</td></tr>
+            <tr><td>input</td><td>An element gets user input</td><td>InputEvent, Event</td></tr>
+            <tr><td>invalid</td><td>An element is invalid</td><td>Event</td></tr>
+            <tr><td>keydown</td><td>A key is pressed down</td><td>KeyboardEvent</td></tr>
+            <tr><td>keypress</td><td>A key is pressed</td><td>KeyboardEvent</td></tr>
+            <tr><td>keyup</td><td>A key is released</td><td>KeyboardEvent</td></tr>
+            <tr><td>load</td><td>An object or media has loaded</td><td>UiEvent, Event</td></tr>
+            <tr><td>loadeddata</td><td>Media data has been loaded</td><td>Event</td></tr>
+            <tr><td>loadedmetadata</td><td>Metadata like dimensions and duration are loaded</td><td>Event</td></tr>
+            <tr><td>loadstart</td><td>The browser starts looking for the specified media</td><td>ProgressEvent</td></tr>
+            <tr><td>message</td><td>A message is received through the event source</td><td>Event</td></tr>
+            <tr><td>mousedown</td><td>The mouse button is pressed over an element</td><td>MouseEvent</td></tr>
+            <tr><td>mouseenter</td><td>The pointer is moved onto an element</td><td>MouseEvent</td></tr>
+            <tr><td>mouseleave</td><td>The pointer is moved out of an element</td><td>MouseEvent</td></tr>
+            <tr><td>mousemove</td><td>The pointer is moved over an element</td><td>MouseEvent</td></tr>
+            <tr><td>mouseover</td><td>The pointer is moved onto an element</td><td>MouseEvent</td></tr>
+            <tr><td>mouseout</td><td>The pointer is moved out of an element</td><td>MouseEvent</td></tr>
+            <tr><td>mouseup</td><td>A mouse button is released over an element</td><td>MouseEvent</td></tr>
+            <tr><td>mousewheel</td><td>The mouse wheel rolls up or down over an element</td><td>WheelEvent</td></tr>
+            <tr><td>offline</td><td>The browser starts working offline</td><td>Event</td></tr>
+            <tr><td>online</td><td>The browser starts working online</td><td>Event</td></tr>
+            <tr><td>open</td><td>A connection with the event source is opened</td><td>Event</td></tr>
+            <tr><td>pagehide</td><td>User navigates away from a webpage</td><td>PageTransitionEvent</td></tr>
+            <tr><td>pageshow</td><td>User navigates to a webpage</td><td>PageTransitionEvent</td></tr>
+            <tr><td>paste</td><td>Content is pasted in an element</td><td>ClipboardEvent</td></tr>
+            <tr><td>pause</td><td>A media playback is paused</td><td>Event</td></tr>
+            <tr><td>play</td><td>A media playback starts or is no longer paused</td><td>Event</td></tr>
+            <tr><td>playing</td><td>A media is playing after being paused or buffered</td><td>Event</td></tr>
+            <tr><td>popstate</td><td>The window's history changes</td><td>PopStateEvent</td></tr>
+            <tr><td>progress</td><td>The browser is downloading media data</td><td>Event</td></tr>
+            <tr><td>ratechange</td><td>The playing speed of a media is changed</td><td>Event</td></tr>
+            <tr><td>resize</td><td>The document view is resized</td><td>UiEvent, Event</td></tr>
+            <tr><td>reset</td><td>A form is reset</td><td>Event</td></tr>
+            <tr><td>scroll</td><td>A scrollbar is being scrolled</td><td>UiEvent, Event</td></tr>
+            <tr><td>search</td><td>Something is written in a search field</td><td>Event</td></tr>
+            <tr><td>seeked</td><td>Skips to a specified position in a media</td><td>Event</td></tr>
+            <tr><td>seeking</td><td>Skips to a specified position in a media starts</td><td>Event</td></tr>
+            <tr><td>select</td><td>Text is selected</td><td>UiEvent, Event</td></tr>
+            <tr><td>show</td><td>A menu or dialog element is shown</td><td>Event</td></tr>
+            <tr><td>stalled</td><td>The browser is trying to fetch media data but cannot</td><td>Event</td></tr>
+            <tr><td>storage</td><td>A Web Storage area is updated</td><td>StorageEvent</td></tr>
+            <tr><td>submit</td><td>A form is submitted</td><td>Event</td></tr>
+            <tr><td>suspend</td><td>Media data download is intentionally stopped</td><td>Event</td></tr>
+            <tr><td>timeupdate</td><td>The current playback position is updated</td><td>Event</td></tr>
+            <tr><td>toggle</td><td>The user opens or closes the <details> element</td><td>Event</td></tr>
+            <tr><td>touchcancel</td><td>A touch event is canceled</td><td>TouchEvent</td></tr>
+            <tr><td>touchend</td><td>A touch event ends</td><td>TouchEvent</td></tr>
+            <tr><td>touchmove</td><td>A touch event moves</td><td>TouchEvent</td></tr>
+            <tr><td>touchstart</td><td>A touch event starts</td><td>TouchEvent</td></tr>
+            <tr><td>transitionend</td><td>A CSS transition has completed</td><td>TransitionEvent</td></tr>
+            <tr><td>unload</td><td>A page or window is being unloaded</td><td>UiEvent, Event</td></tr>
+            <tr><td>volumechange</td><td>The volume of a media changes</td><td>Event</td></tr>
+            <tr><td>waiting</td><td>The media playback is waiting for more data</td><td>Event</td></tr>
+            <tr><td>wheel</td><td>A mouse wheel event occurs</td><td>WheelEvent</td></tr>
+            
         </tbody>
     </table>
 
