@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Transformation Demo</title>
     <style>
+        .styled-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No borders */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 4px; /* Rounded corners */
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        .styled-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Active effect */
+        .styled-button:active {
+            background-color: #3e8e41; /* Even darker green on click */
+        }
+
+        /* Remove default button styles */
+        .styled-button:focus {
+            outline: none;
+        }
+
+        /* Style for the anchor tag */
+        .styled-button a {
+            text-decoration: none; /* Remove underline from link */
+            color: inherit; /* Inherit text color */
+        }
+
+        /* If you want the button to fill the entire width of its container */
+        .full-width {
+            width: 100%;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
