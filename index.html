@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Transformation Demo</title>
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -48,12 +48,14 @@
             color: white; /* Text color */
             width: 100%;
         }
-    </style>
+    </style> -->
 </head>
 <body>
 
 
     <h1>hekrfjgh</h1>
+
+    <h1 class="demo"></h1>
 
     <div class="transform-box" id="box1">
         <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
@@ -64,6 +66,8 @@
     </div>
 
     <script>
+
+        document.getElementById("demo").baseURI
         const boxes = document.querySelectorAll('.transform-box');
     
         boxes.forEach(box => {
