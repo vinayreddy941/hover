@@ -1,37 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <!-- Add onclick attribute to the h1 element -->
-    <button onclick="myfunction1()">drfgh</button>
-    <h2 id="demo"></h2>
 
+    <!DOCTYPE html>
+    <html>
+    <body onclick="myFunction()">
+    
+    <h1>The Document Object</h1>
+    <h2>The activeElement Property</h2>
+    
+    <input type="text" value="An input field">
+    <button>A Button</button>
+    
+    <p>Click anywhere in the document to display the active element:</p>
+    
+    <p id="demo"></p>
+    
     <script>
-        let p1 = 22;
-        let p2 = 11;
-        let isVisible = true;
-
-        // Add event listener to the document for the click event
-       
-        
-        function myfunction1() {
-
-            if (isVisible) {
-                document.getElementById("demo").innerHTML = p1 * p2;
-                isVisible = false;
-            }else{
-                document.getElementById("demo").innerHTML = "";
-                isVisible = true;
-            }
-            
-            // Set the innerHTML of the element with id "demo" to the product of p1 and p2
-
-            
-        }
+    function myFunction() {
+      const element = document.activeElement.tagName;
+      document.getElementById("demo").innerHTML = element;
+    }
     </script>
+    
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>The Document Object</h1>
+<h2>The removeEventListener() Method</h2>
+
+<p>A mousemove event handler displays a random number every time you move your mouse in this document.</p>
+
+<p>Click "Remove" to remove the event handler.</p>
+
+<button onclick="removeHandler()">Remove</button>
+
+<p id="demo"></p>
+
+<script>
+document.addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.removeEventListener("mousemove", myFunction);
+}
+</script>
+
 </body>
 </html>
