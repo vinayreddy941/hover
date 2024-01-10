@@ -3,150 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Transformation Demo</title>
-    <style>
-        .styled-button {
-            padding: 10px 20px;
-            background-color: #4CAF50; /* Green background */
-            color: white; /* White text */
-            border: none; /* No borders */
-            cursor: pointer; /* Pointer cursor */
-            border-radius: 4px; /* Rounded corners */
-            text-align: center;
-            font-size: 16px;
-            transition: background-color 0.3s ease; /* Smooth transition */
-        }
-
-        /* Hover effect */
-        .styled-button:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-
-        /* Active effect */
-        .styled-button:active {
-            background-color: #3e8e41; /* Even darker green on click */
-        }
-
-        /* Remove default button styles */
-        .styled-button:focus {
-            outline: none;
-        }
-
-        /* Style for the anchor tag */
-        .styled-button a {
-            text-decoration: none; /* Remove underline from link */
-            color: inherit; /* Inherit text color */
-        }
-
-        /* If you want the button to fill the entire width of its container */
-        .full-width {
-            width: 100%;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden; /* To prevent scrolling */
-        }
-    
-        .transform-box {
-            margin-right: 20px; /* Add margin between the images */
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.1s ease; /* Reduced transition time */
-            will-change: transform;
-            transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
-        }
-    
-        .img {
-            width: 400px;
-            height: 200px;
-        }
-    
-        .text {
-            top: 50%;
-            left: 50%;
-            transform: translate(10%, -50%); /* Centering trick */
-            color: white; /* Text color */
-            font-size: 24px; /* Adjust font size as needed */
-        }
-    
-        .tet {
-            top: 50%;
-            left: 50%;
-            transform: translate(65%, -50%); /* Centering trick */
-            background-color: blue;
-            color: white; /* Text color */
-            width: 100%;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <a href="table.html"><button>table</button></a>
 
-
-    <h1>hekrfjgh</h1>
-
-    <div class="transform-box" id="box1">
-        <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
-    </div>
-
-    <div class="transform-box" id="box2">
-        <img class="img" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" >
-    </div>
-
+    <style>
+        .newId{
+            color: aqua;
+            background-color: red;
+        }
+    </style>
+    <h1 id = "vina">dfghjk,</h1>
+<h1 class="hello">i am coming back</h1>
+    <button onclick = "myfunction()" >hello</button>
     <script>
-        const boxes = document.querySelectorAll('.transform-box');
-    
-        boxes.forEach(box => {
-            let isDragging = false;
-            let previousX, previousY;
-    
-            const handleDragStart = (e) => {
-                isDragging = true;
-                const touch = e.touches ? e.touches[0] : e;
-                previousX = touch.clientX;
-                previousY = touch.clientY;
-            };
-    
-            const handleDragMove = (e) => {
-                if (isDragging) {
-                    const touch = e.touches ? e.touches[0] : e;
-                    const deltaX = touch.clientX - previousX;
-                    const deltaY = touch.clientY - previousY;
-    
-                    // Increased sensitivity by multiplying the rotation factors
-                    const rotateX = deltaY / 5;
-                    const rotateY = -deltaX / 5;
-    
-                    box.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-    
-                    previousX = touch.clientX;
-                    previousY = touch.clientY;
-                }
-            };
-    
-            const handleDragEnd = () => {
-                isDragging = false;
-                box.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
-            };
-    
-            box.addEventListener('mousedown', handleDragStart);
-            box.addEventListener('mousemove', handleDragMove);
-            box.addEventListener('mouseup', handleDragEnd);
-    
-            box.addEventListener('touchstart', handleDragStart);
-            box.addEventListener('touchmove', handleDragMove);
-            box.addEventListener('touchend', handleDragEnd);
-        });
-    </script>
-    
 
+       function myfunction(){
+        document.write("<h1>dfggfd</h1>")
+       }
+
+
+
+    </script>
 </body>
 </html>
